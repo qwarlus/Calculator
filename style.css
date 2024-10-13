@@ -1,0 +1,72 @@
+#calc {
+    width: 65vmin;
+    height: 50vmin;
+    background-color: orange;
+    margin: 20vmin auto;
+    border: 0.25vmin solid black;
+    border-radius: 1.2vmin 1.2vmin 1.2vmin;
+
+    #screen {
+        height: 25%;
+        padding: 2vmin;
+        box-sizing: border-box;
+
+
+        #out {
+            background-color: gray;
+            display: block;
+            height: 100%;
+            text-align: right;
+            line-height: 1.2;
+            font-size: 8vmin;
+            padding: 0 1vmin;
+            border: 0.25vmin solid black;
+            border-radius: 1.2vmin ;
+            font-family: "VT323", monospace;
+
+        }
+    }
+}
+
+#buttons {
+    box-sizing: border-box;
+    height: 75%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 1fr;
+    grid-auto-flow: dense;
+    gap: 1vmin;
+    padding: 0 2vmin 2vmin;
+
+    
+
+    button {
+        font-size: 5vmin;
+        border: 0.19vmin solid black;
+        border-radius: 1.2vmin;
+    }
+
+    .digit {
+
+        &[value="4"],
+        &[value="7"] {
+            grid-column: 1;
+        }
+
+        &[value="5"],
+        &[value="8"],
+        &[value="0"] {
+            grid-column: 2;
+        }
+
+        &[value="6"],
+        &[value="9"] {
+            grid-column: 3;
+        }
+    }
+
+    .operation {
+        grid-column: 4;
+    }
+
+}
